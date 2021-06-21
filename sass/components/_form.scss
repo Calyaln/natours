@@ -9,7 +9,7 @@
     color: inherit; // input el don't inherit font properties
     padding: 1.5rem 2rem;
     border-radius: 0.2rem;
-    background-color: rgbe($color-white, 0.5);
+    background-color: rgba($color-white, 0.5);
     border: none;
     border-bottom: 0.3rem solid transparent; // so we don't have pixels moving when clicked, it exists but transparent
     width: 90%;
@@ -74,15 +74,12 @@
     top: -0.4rem;
 
     &::after {
+      @include absCenter;
       content: "";
       display: block;
       height: 1.3rem;
       width: 1.3rem;
       border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       background-color: $color-primary;
       opacity: 0;
       transition: opacity 0.2s;

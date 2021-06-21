@@ -47,11 +47,7 @@
   }
 
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // we could do a mixins bc we use the same code all the time
+    @include absCenter;
     list-style: none;
     text-align: center;
     width: 100%;
