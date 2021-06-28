@@ -1,3 +1,17 @@
+/*
+MEDIA QUERY MANAGER
+0-780px: phone
+780-900px: tablet portrait
+780-1200px: tablet landscape
+1200-1800px: is where our normal style apply
+1800px +: big desktop 
+
+BREAKPOINT ARGUMENT CHOICES 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,9 +49,25 @@
 
 html {
   font-size: 62.5%;
-  /* we declare it first like that so 1 rem = 10px */
+  /* we declare it first like that so 1rem = 10px */
   /* then we convert to % by dividing 10/16 x 100 = .625 */
-  /* finally .625 x 100 = 62.5% */ }
+  /* finally .625 x 100 = 62.5% */
+  /* 
+  the order counts in media queries
+  so if I want the smaller screens to benefit 
+  from the smaller media queries I need to put it last 
+  so when there is a conflict between small and medium
+  It chooses small
+  */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

@@ -8,9 +8,35 @@
 
 html {
   font-size: 62.5%;
-  /* we declare it first like that so 1 rem = 10px */
+  /* we declare it first like that so 1rem = 10px */
   /* then we convert to % by dividing 10/16 x 100 = .625 */
   /* finally .625 x 100 = 62.5% */
+
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // }
+  // this one is now uncessary bc the next one is also 50%
+
+  @include respond(tab-land) {
+    // width < 900px?
+    font-size: 56.25%; // 1rem = 9px / 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 780px?
+    font-size: 50%; // 1rem = 8px / 8/16 = 50%
+  }
+  /* 
+  the order counts in media queries
+  so if I want the smaller screens to benefit 
+  from the smaller media queries I need to put it last 
+  so when there is a conflict between small and medium
+  It chooses small
+  */
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px / 12/16 = 75%
+  }
 }
 
 body {
