@@ -16,9 +16,9 @@
     height: 95vh;
   }
 
-  @media (min-resolution: 192dpi) and (min-width: 48.75em),
-    (-webkit-min-device-pixel-ratio: 2) and (min-width: 48.75em),
-    (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 48.75em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 48.75em),
+    only screen and (min-width: 125em) {
     //resolution of retina screen
     // combining multiple properties
     background-image: linear-gradient(
